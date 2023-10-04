@@ -9,7 +9,7 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
 import { AddContactComponent } from './components/add-contact/add-contact.component';
 import { UpdateContactComponent } from './components/update-contact/update-contact.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { AddComponent } from './components/add/add.component';
+import { ViewComponent } from './components/view/view.component';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { AddComponent } from './components/add/add.component';
     AddContactComponent,
     UpdateContactComponent,
     PagenotfoundComponent,
-    AddComponent,
+    ViewComponent,
+    
     
   ],
   imports: [

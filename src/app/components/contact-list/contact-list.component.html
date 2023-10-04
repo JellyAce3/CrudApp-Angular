@@ -43,6 +43,7 @@
             <td>{{item.email}}</td>
             <td>{{item.phonenumber}}</td>
             <td>
+              <i style="color:rgb(0, 255, 4);" routerLink="/viewcontact/{{item.id}}" class="fa fa-eye"></i>&nbsp;
               <i style="color:blue;" routerLink="/updatecontact/{{item.id}}" class="fas fa-edit"></i>&nbsp;
               <i style="color: red; " (click)="delete(item.id)" class="fas fa-trash"></i>
             </td>
