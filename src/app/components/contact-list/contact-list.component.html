@@ -1,0 +1,60 @@
+<!--navbar-->
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <h1 style="color: white; font-size: 24px">Contact Management</h1>
+    <div>
+      <button class="btn btn-success" routerLink="/addcontact">Add Contact</button>
+    </div>
+  </div>
+</nav>
+
+<div>
+</div>
+
+<!--image section-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="image">
+                <img src="assets/one-piece-png-873x786-px-873.png" />
+            </div>
+        </div>
+
+
+
+<!--table-->
+<div class="col-sm-7">
+    <table class="table table-borderless mt-2">
+        <thead>
+          <tr>
+            <th scope="col">ID#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Number</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.phonenumber}}</td>
+            <td>
+              <i style="color:blue;" routerLink="/updatecontact/{{item.id}}" class="fas fa-edit"></i>&nbsp;
+              <i style="color: red; " (click)="delete(item.id)" class="fas fa-trash"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+    </div>
+</div>
+
+
+
+
+

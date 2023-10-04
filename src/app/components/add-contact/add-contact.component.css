@@ -1,0 +1,22 @@
+img{
+    width:25rem;
+    margin-top: 10rem;
+}
+
+.card{
+
+    left: 40%;
+    width: 400px;
+    padding: 31px 40px;
+    transform: translate(-50%, 20%);
+    border: 1px solid black;
+}
+
+h5{
+    width:25rem;
+    font-size: 21px;
+}
+
+.err{
+    color:red;
+}

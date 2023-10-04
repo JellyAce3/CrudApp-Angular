@@ -1,0 +1,46 @@
+<!--image-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col sm-5">
+            <div class="image">
+                <img src="assets/one-piece-png-https-onepiece-ts-en-bn-ent-net-img-char-png-1111.png"/>
+            </div>
+        </div>
+        <!--form section-->
+        <div class="col-md-6">
+            <div  class="card">
+                <h5>Add Contact</h5>
+                <div class="row">
+                    <form #f="ngForm" (ngSubmit)="onSubmit(this.contactForm.value)" novalidate>
+                        <div class="form-group mb-1">
+                          <label for="exampleInputEmail1" class="form-label">Name</label>
+                          <input type="text" class="form-control" formControlName="name" placeholder="Enter Name"/>
+                          <div class="error-list"*ngIf="fc.name.errors && isSubmitted">
+                            <div *ngIf="fc.name.errors.required">Should not be empty</div>
+                        </div>
+                        </div>
+                        <div class="form-group mb-1">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="text" class="form-control" formControlName="email" placeholder="Enter Email address"/>
+                          <div class="error-list"*ngIf="fc.email.errors && isSubmitted">
+                            <div *ngIf="fc.email.errors.required">Should not be empty</div>
+                            <div *ngIf="fc.email.errors.email">Email is not correct</div>
+                        </div>
+                        </div>
+                        <div class="form-group mb-1">
+                          <label for="exampleInputEmail1" class="form-label">Number</label>
+                          <input type="number" class="form-control" formControlName="phonenumber" placeholder="Enter Phonenumber"/>
+                          <div class="error-list"*ngIf="fc.phonenumber.errors && isSubmitted">
+                            <div *ngIf="fc.phonenumber.errors.required">Should not be empty</div>
+                        </div>
+                        </div>
+                        <div class="text center mt-2">
+                        <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+                        <button type="submit" routerLink="/contactlist" class="btn btn-success">Back</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

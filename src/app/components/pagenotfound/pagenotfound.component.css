@@ -1,0 +1,35 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    height: 20rem;
+
+}
+
+.btn1{
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.error-text{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: cursive;
+}
+
+.error{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    background: #6200ee;
+    color: #fff;
+    border-radius: 1rem;
+}
