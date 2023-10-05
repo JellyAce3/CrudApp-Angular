@@ -18,7 +18,7 @@ export class AddContactComponent implements OnInit{
       this.contactForm=this.formbuilder.group({
         name:['',Validators.required],
         email:['',[Validators.required, Validators.email,Validators.pattern]],
-        phonenumber:['',Validators.required,],
+        phonenumber:['',[Validators.required,Validators.minLength(9)]]
       })
   }
 

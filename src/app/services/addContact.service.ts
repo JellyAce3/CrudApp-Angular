@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { contact } from '../shared/model/contactmodel';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,32 +14,32 @@ export class AddContactService {
 
 //post method
 
-addContact(data:contact){
+addContact(data:contact):Observable<contact>{
   return this.http.post<contact>(this.url,data)
 }
 
 
 //get method
 
-getContact(){
+getContact():Observable<contact[]>{
   return this.http.get<contact[]>(this.url)
 
 }
 
 //delete method
-deleteContact(id:number){
+deleteContact(id:number):Observable<contact>{
   return this.http.delete<contact>(`${this.url}/${id}`);
   }
 
 //fetchdata for Update
 
-fetch(id:number){
+fetch(id:number):Observable<contact>{
   return this.http.get<contact>(`${this.url}/${id}`)
 }
 
 //update
 
-updatecontact(data:contact, id:number){
+updatecontact(data:contact, id:number):Observable<contact>{
   return this.http.put<contact>(`${this.url}/${id}`,data);
 }
 }

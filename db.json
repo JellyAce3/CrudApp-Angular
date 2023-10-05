@@ -1,10 +1,34 @@
 {
   "contacts": [
     {
-      "name": "dfghghg",
-      "email": "dfgh@gmail.com",
-      "phonenumber": 3.4567890987654345e+34,
+      "name": "Lincoln Distrajo",
+      "email": "lincolndistrajo@gmail.com",
+      "phonenumber": 9508684531,
       "id": 1
+    },
+    {
+      "name": "Jelou Maceda",
+      "email": "jeloumaceda@gmail.com",
+      "phonenumber": 9999713663,
+      "id": 2
+    },
+    {
+      "name": "Raze Abbang",
+      "email": "razeabbang@gmail.com",
+      "phonenumber": 9635844217,
+      "id": 3
+    },
+    {
+      "name": "Ludy Maceda",
+      "email": "ludymaceda@gmail.com",
+      "phonenumber": 92054272256789,
+      "id": 4
+    },
+    {
+      "name": "jhgfd",
+      "email": "jhgfc@gnail.com",
+      "phonenumber": 345678,
+      "id": 5
     }
   ]
 }

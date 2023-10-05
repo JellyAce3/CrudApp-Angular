@@ -5,11 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from  '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
+import { ToastrModule } from 'ngx-toastr'
+import { NgConfirmModule } from 'ng-confirm-box';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
 import { UpdateContactComponent } from './components/update-contact/update-contact.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ViewComponent } from './components/view/view.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -20,6 +23,7 @@ import { ViewComponent } from './components/view/view.component';
     UpdateContactComponent,
     PagenotfoundComponent,
     ViewComponent,
+    HeaderComponent,
     
     
   ],
@@ -28,7 +32,16 @@ import { ViewComponent } from './components/view/view.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot({
+      positionClass:'toast-top-center',
+      preventDuplicates:true,
+      timeOut:3000,
+      easing:'ease-in',
+      easeTime:1000
+
+    }),
+    NgConfirmModule
   ],
   providers: [],
   bootstrap: [AppComponent]

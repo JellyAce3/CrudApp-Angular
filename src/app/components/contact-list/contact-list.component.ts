@@ -9,7 +9,7 @@ import { contact } from 'src/app/shared/model/contactmodel';
 })
 export class ContactListComponent implements OnInit{
   data: undefined|contact[]
-  constructor(private add:AddContactService){}
+  constructor(private add:AddContactService ){}
 
   ngOnInit(): void {
       this.getContact();
