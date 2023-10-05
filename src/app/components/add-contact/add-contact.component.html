@@ -1,18 +1,18 @@
-<app-header></app-header>
-<!--image-->
+
+<!--image-
 <div class="container-fluid">
     <div class="row">
         <div class="col sm-5">
             <div class="image">
                 <img src="assets/giphy (1).gif"/>
             </div>
-        </div>
+        </div>-->
         <!--form section-->
         <div class="col-md-6">
             <div  class="card">
                 <h5>Add Contact</h5>
                 <div class="row">
-                    <form [formGroup]="contactForm">
+                    <form [formGroup]="contactForm" autocomplete="off" >
                         <div class="input-box">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" formControlName="name" placeholder="name@example.com">
@@ -22,20 +22,20 @@
                         </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" formControlName="email" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="floatingInput" formControlName="email" placeholder="name@example.com" required>
                             <label for="floatingInput">Email address</label>
-                          <div class="error-list"*ngIf="fc.email.errors && isSubmitted">
-                            <div class="err" *ngIf="fc.email.errors.required">Should not be empty</div>
-                            <div class="err" *ngIf="fc.email.errors.email">Email is not correct</div>
-                        </div>
-                        </div>
-                    
+                            <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
+                              <div class="err" *ngIf="fc.email.errors.required">Should not be empty</div>
+                              <div class="err" *ngIf="fc.email.errors.email">Invalid email format</div>
+                              <div class="err" *ngIf="fc.email.errors.invalidEmail">Email must end with @gmail.com</div>
+                            </div>
+                          </div>
                         <div class="form-floating mb-3">
-                            <input [maxlength]="9" type="number" class="form-control" id="floatingInput" formControlName="phonenumber" placeholder="name@example.com">
+                            <input [minlength]="11" type="number" class="form-control" id="floatingInput" formControlName="phonenumber" placeholder="name@example.com" (input)="limitInputLength($event)">
                             <label for="floatingInput"> Mobile No.</label>
                           <div class="error-list"*ngIf="fc.phonenumber.errors && isSubmitted">
                             <div class="err" *ngIf="fc.phonenumber.errors.required">Should not be empty</div>
-                            <div class="err" *ngIf="fc.phonenumber.errors.minlength"> empty</div>
+                            <div class="err" *ngIf="fc.phonenumber.errors.minlength"> Must be 11 digits</div>
                         </div>
                         </div>
                         <div class="text center mt-2">

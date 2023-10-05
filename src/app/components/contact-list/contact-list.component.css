@@ -16,3 +16,21 @@ button:hover{
 i:hover{
     box-shadow: 0 0 10px #fa3403, inset  0 0 10px #fdb01d;
 }
+
+button{
+    margin-left: 20rem;
+    margin-top: 2rem;
+}
+
+.both{
+    display: flex;
+}
+
+.table{
+    margin-top: 5rem;
+    width: max-content;
+}
+
+.Add{
+    margin-left: 20rem;
+}

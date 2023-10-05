@@ -1,6 +1,6 @@
+<app-header></app-header>
 
-
-<!--navbar-->
+<!--navbar
 
 <nav class="navbar">
   <div class="container-fluid">
@@ -9,13 +9,11 @@
       <button class="btn btn-success" routerLink="/addcontact">Add Contact</button>
     </div>
   </div>
-</nav>
+</nav>-->
 
-<div>
-  
-</div>
 
-<!--image section-->
+
+<!--image section
 
 <div class="container-fluid">
     <div class="row">
@@ -23,13 +21,18 @@
             <div class="image">
                 <img src="assets/one-piece-png-873x786-px-873.png" />
             </div>
-        </div>
-
+        </div>-->
 
 
 <!--table-->
 <div class="col-sm-7">
-    <table class="table table-borderless mt-2">
+ <div class="both"> 
+  <div class="Add">
+  <app-add-contact (userAdded)="onUserAdded($event)"></app-add-contact>
+</div>
+<!--<button >ADD CONTACT</button>-->
+<div class="table">
+    <table class="table table mt-2">
         <thead>
           <tr>
             <th scope="col">ID#</th>
@@ -53,10 +56,11 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
 </div>
 
-    </div>
-</div>
+
 
 
 

@@ -7,6 +7,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { ViewComponent } from './components/view/view.component';
 
 const routes: Routes = [
+  {path: '', component:ContactListComponent},
   {path: 'contactlist', component:ContactListComponent},
   {path: 'addcontact', component: AddContactComponent},
   {path: 'updatecontact/:id', component: UpdateContactComponent},
