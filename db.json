@@ -1,7 +1,7 @@
 {
   "contacts": [
     {
-      "name": "Lincoln Distrajo",
+      "name": "Linncoln Distrajo",
       "email": "lincolndistrajo@gmail.com",
       "phonenumber": 9508684531,
       "id": 1
@@ -83,12 +83,6 @@
       "email": "dfg@gmail.com",
       "phonenumber": 234567898764,
       "id": 14
-    },
-    {
-      "name": "fghjkhgf",
-      "email": "fghjk@gmail.com",
-      "phonenumber": 345678765437,
-      "id": 15
     }
   ]
 }

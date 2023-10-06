@@ -9,7 +9,6 @@ import { ToastrModule } from 'ngx-toastr'
 import { NgConfirmModule } from 'ng-confirm-box';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
-import { UpdateContactComponent } from './components/update-contact/update-contact.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ViewComponent } from './components/view/view.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -20,7 +19,6 @@ import { HeaderComponent } from './components/header/header.component';
     AppComponent,
     ContactListComponent,
     AddContactComponent,
-    UpdateContactComponent,
     PagenotfoundComponent,
     ViewComponent,
     HeaderComponent,

@@ -1,51 +1,105 @@
-
-<!--image-
 <div class="container-fluid">
-    <div class="row">
-        <div class="col sm-5">
-            <div class="image">
-                <img src="assets/giphy (1).gif"/>
-            </div>
-        </div>-->
-        <!--form section-->
-        <div class="col-md-6">
-            <div  class="card">
-                <h5>Add Contact</h5>
-                <div class="row">
-                    <form [formGroup]="contactForm" autocomplete="off" >
-                        <div class="input-box">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" formControlName="name" placeholder="name@example.com">
-                            <label for="floatingInput">Name</label>
-                          <div class="error-list"*ngIf="fc.name.errors && isSubmitted">
-                            <div class="err" *ngIf="fc.name.errors.required">Should not be empty</div>
-                        </div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" formControlName="email" placeholder="name@example.com" required>
-                            <label for="floatingInput">Email address</label>
-                            <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
-                              <div class="err" *ngIf="fc.email.errors.required">Should not be empty</div>
-                              <div class="err" *ngIf="fc.email.errors.email">Invalid email format</div>
-                              <div class="err" *ngIf="fc.email.errors.invalidEmail">Email must end with @gmail.com</div>
-                            </div>
-                          </div>
-                        <div class="form-floating mb-3">
-                            <input [minlength]="11" type="number" class="form-control" id="floatingInput" formControlName="phonenumber" placeholder="name@example.com" (input)="limitInputLength($event)">
-                            <label for="floatingInput"> Mobile No.</label>
-                          <div class="error-list"*ngIf="fc.phonenumber.errors && isSubmitted">
-                            <div class="err" *ngIf="fc.phonenumber.errors.required">Should not be empty</div>
-                            <div class="err" *ngIf="fc.phonenumber.errors.minlength"> Must be 11 digits</div>
-                        </div>
-                        </div>
-                        <div class="text center mt-2">
-                        <button type="submit" (click)="submitContact(this.contactForm.value)"class="btn btn-primary">Submit</button>&nbsp;
-                        <button type="submit" routerLink="/contactlist" class="btn btn-success">Back</button>
-                        </div>
-                        </div>
-                    </form>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <h5
+          [attr.aria-label]="existingContact ? 'Update Contact' : 'Add Contact'"
+        >
+          {{ existingContact ? "Update Contact" : "Add Contact" }}
+        </h5>
+        <div class="row">
+          <form [formGroup]="contactForm" autocomplete="off">
+            <div class="input-box">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  formControlName="name"
+                  placeholder="Name"
+                  [attr.aria-label]="
+                    'Name ' +
+                    (existingContact ? 'of existing contact' : 'field')
+                  "
+                />
+                <label for="floatingInput">Name</label>
+                <div class="error-list" *ngIf="fc.name.errors && isSubmitted">
+                  <div class="err" *ngIf="fc.name.errors.required">
+                    Should not be empty
+                  </div>
                 </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  formControlName="email"
+                  placeholder="Email address"
+                  [attr.aria-label]="
+                    'Email ' +
+                    (existingContact ? 'of existing contact' : 'field')
+                  "
+                  required
+                />
+                <label for="floatingInput">Email address</label>
+                <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
+                  <div class="err" *ngIf="fc.email.errors.required">
+                    Should not be empty
+                  </div>
+                  <div class="err" *ngIf="fc.email.errors.email">
+                    Invalid email format
+                  </div>
+                  <div class="err" *ngIf="fc.email.errors.invalidEmail">
+                    Email must end with @gmail.com
+                  </div>
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  [minlength]="11"
+                  type="number"
+                  class="form-control"
+                  id="floatingInput"
+                  formControlName="phonenumber"
+                  placeholder="Mobile No."
+                  (input)="limitInputLength($event)"
+                  [attr.aria-label]="
+                    'Mobile Number ' +
+                    (existingContact ? 'of existing contact' : 'field')
+                  "
+                />
+                <label for="floatingInput">Mobile No.</label>
+                <div
+                  class="error-list"
+                  *ngIf="fc.phonenumber.errors && isSubmitted"
+                >
+                  <div class="err" *ngIf="fc.phonenumber.errors.required">
+                    Should not be empty
+                  </div>
+                  <div class="err" *ngIf="fc.phonenumber.errors.minlength">
+                    Must be 11 digits
+                  </div>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <button
+                  type="submit"
+                  (click)="submitContact(this.contactForm.value)"
+                  class="btn btn-primary"
+                  [attr.aria-label]="
+                    existingContact
+                      ? 'Update Contact Button'
+                      : 'Add Contact Button'
+                  "
+                >
+                  {{ existingContact ? "Update Contact" : "Add Contact" }}
+                </button>
+              </div>
             </div>
+          </form>
         </div>
-    
-       
+      </div>
+    </div>
+  </div>
+</div>

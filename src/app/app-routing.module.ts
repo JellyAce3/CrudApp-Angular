@@ -1,18 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
-import { AddContactComponent } from './components/add-contact/add-contact.component';
-import { UpdateContactComponent } from './components/update-contact/update-contact.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ViewComponent } from './components/view/view.component';
 
 const routes: Routes = [
-  {path: '', component:ContactListComponent},
-  {path: 'contactlist', component:ContactListComponent},
-  {path: 'addcontact', component: AddContactComponent},
-  {path: 'updatecontact/:id', component: UpdateContactComponent},
-  {path: 'viewcontact/:id', component: ViewComponent},
   {path: '',redirectTo: 'contactlist',pathMatch:'full'},
+  {path: 'contactlist', component:ContactListComponent},
+  {path: 'viewcontact/:id', component: ViewComponent},
   {path: '**', component:PagenotfoundComponent}
 ];
 
