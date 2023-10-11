@@ -8,6 +8,8 @@
       <app-add-contact
         (userAdded)="onUserAdded($event)"
         [existingContact]="existingContact"
+        (cancelEdit)="cancelEdit"
+        (isUpdateMode)="false"
       ></app-add-contact>
     </div>
     <div class="table">

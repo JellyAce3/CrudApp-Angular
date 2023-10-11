@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddContactService } from 'src/app/services/addContact.service';
 import { contact } from 'src/app/shared/model/contactmodel';
-
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
@@ -11,6 +10,8 @@ export class ContactListComponent implements OnInit {
   data: undefined | contact[];
   public contactData: contact = {} as contact;
   existingContact: contact | undefined; // Property to hold the existing contact data for updating
+  isUpdateMode: boolean = false; // Flag to track whether you are in "update" mode
+  
   constructor(private add: AddContactService) {}
 
   ngOnInit(): void {
@@ -27,6 +28,8 @@ export class ContactListComponent implements OnInit {
   editContact(contactData: contact) {
     console.log('Editing contact:', contactData);
     this.existingContact = contactData;
+    this.isUpdateMode = true; // Set the update mode flag
+  
   }
 
   // Clear the existing contact data to exit the update mode
@@ -42,9 +45,16 @@ export class ContactListComponent implements OnInit {
       console.log('Contact updated successfully');
       // Clear the existing contact data to exit the update mode
       this.existingContact = undefined;
+      this.isUpdateMode = false;
       // Refresh the contact list
       this.getContact();
     });
+  }
+
+  // Handle adding a new contact
+  addNewContact() {
+    this.existingContact = undefined; // Clear existing contact data
+    this.isUpdateMode = false; // Exit the update mode
   }
 
   onUserAdded(event: string) {
@@ -59,4 +69,5 @@ export class ContactListComponent implements OnInit {
       this.getContact();
     });
   }
+ 
 }

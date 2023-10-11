@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnChanges , SimpleChanges} from '@angular/core';
 import {
   FormGroup,
   FormBuilder,
@@ -15,7 +15,7 @@ import { contact } from 'src/app/shared/model/contactmodel';
   templateUrl: './add-contact.component.html',
   styleUrls: ['./add-contact.component.css'],
 })
-export class AddContactComponent implements OnInit {
+export class AddContactComponent implements OnChanges {
   @Output() userAdded = new EventEmitter<string>();
   @Input() existingContact: contact | undefined; // Input property for existing contact
   contactForm!: FormGroup | any;
@@ -25,17 +25,16 @@ export class AddContactComponent implements OnInit {
     private formbuilder: FormBuilder,
     private router: Router,
     private add: AddContactService
-  ) {}
-
-  ngOnInit(): void {
+  ) {
     this.contactForm = this.formbuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email, this.emailValidator]],
       phonenumber: ['', [Validators.required, Validators.minLength(11)]],
     });
+  }
 
-    // If an existing contact is provided, initialize the form with its data
-    if (this.existingContact) {
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['existingContact'] && this.contactForm) {
       this.contactForm.patchValue(this.existingContact);
     }
   }
@@ -49,6 +48,7 @@ export class AddContactComponent implements OnInit {
       this.add.updateContact(this.existingContact.id, data).subscribe((res) => {
         this.isSubmitted = false;
         this.userAdded.emit('Contact updated successfully');
+        this.contactForm.reset(); // Clear the form fields after updating
       });
     } else {
       // Add a new contact

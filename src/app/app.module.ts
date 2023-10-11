@@ -7,11 +7,13 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { ToastrModule } from 'ngx-toastr'
 import { NgConfirmModule } from 'ng-confirm-box';
-import { ContactListComponent } from './components/contact-list/contact-list.component';
-import { AddContactComponent } from './components/add-contact/add-contact.component';
-import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { ViewComponent } from './components/view/view.component';
-import { HeaderComponent } from './components/header/header.component';
+import { ContactListComponent } from './components/pages/contact-list/contact-list.component';
+import { AddContactComponent } from './components/pages/add-contact/add-contact.component';
+import { PagenotfoundComponent } from './components/pages/pagenotfound/pagenotfound.component';
+import { ViewComponent } from './components/pages/view/view.component';
+import { HeaderComponent } from './components/partial/header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DeleteConfimationComponent } from './components/modal/delete-confimation/delete-confimation.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { HeaderComponent } from './components/header/header.component';
     PagenotfoundComponent,
     ViewComponent,
     HeaderComponent,
+    DeleteConfimationComponent
+    
     
     
   ],
@@ -39,7 +43,7 @@ import { HeaderComponent } from './components/header/header.component';
       easeTime:1000
 
     }),
-    NgConfirmModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

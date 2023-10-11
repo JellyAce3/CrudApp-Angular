@@ -1,33 +1,15 @@
 {
   "contacts": [
     {
-      "name": "Linncoln Distrajo",
-      "email": "lincolndistrajo@gmail.com",
-      "phonenumber": 9508684531,
-      "id": 1
-    },
-    {
-      "name": "Jelou Maceda",
-      "email": "jeloumaceda@gmail.com",
-      "phonenumber": 9999713663,
-      "id": 2
-    },
-    {
-      "name": "Raze Abbang",
-      "email": "razeabbang@gmail.com",
-      "phonenumber": 9635844217,
-      "id": 3
-    },
-    {
-      "name": "Ludy Maceda",
-      "email": "ludymaceda@gmail.com",
-      "phonenumber": 92054272256789,
+      "name": "jeloumacedatest",
+      "email": "jelou@gmail.com",
+      "phonenumber": 456789765438,
       "id": 4
     },
     {
-      "name": "adfgh",
-      "email": "adfgh@gmail.com",
-      "phonenumber": 23456789,
+      "name": "updated",
+      "email": "updated@gmail.com",
+      "phonenumber": 987654321,
       "id": 5
     },
     {
@@ -59,30 +41,6 @@
       "email": "aaa@gmail.com",
       "phonenumber": 876543456785,
       "id": 10
-    },
-    {
-      "name": "345678",
-      "email": "45678@gmail.com",
-      "phonenumber": 1,
-      "id": 11
-    },
-    {
-      "name": "fghjk",
-      "email": "ghjk@gmail.com",
-      "phonenumber": 456789876547,
-      "id": 12
-    },
-    {
-      "name": "dfghj",
-      "email": "fghjk@gmail.com",
-      "phonenumber": 456789876547,
-      "id": 13
-    },
-    {
-      "name": "fghj",
-      "email": "dfg@gmail.com",
-      "phonenumber": 234567898764,
-      "id": 14
     }
   ]
 }
