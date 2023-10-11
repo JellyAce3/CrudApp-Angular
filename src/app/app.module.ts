@@ -13,7 +13,6 @@ import { PagenotfoundComponent } from './components/pages/pagenotfound/pagenotfo
 import { ViewComponent } from './components/pages/view/view.component';
 import { HeaderComponent } from './components/partial/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DeleteConfimationComponent } from './components/modal/delete-confimation/delete-confimation.component';
 
 
 @NgModule({
@@ -23,8 +22,7 @@ import { DeleteConfimationComponent } from './components/modal/delete-confimatio
     AddContactComponent,
     PagenotfoundComponent,
     ViewComponent,
-    HeaderComponent,
-    DeleteConfimationComponent
+    HeaderComponent
     
     
     

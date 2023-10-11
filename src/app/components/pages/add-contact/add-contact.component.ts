@@ -23,7 +23,6 @@ export class AddContactComponent implements OnChanges {
 
   constructor(
     private formbuilder: FormBuilder,
-    private router: Router,
     private add: AddContactService
   ) {
     this.contactForm = this.formbuilder.group({
@@ -36,7 +35,15 @@ export class AddContactComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes['existingContact'] && this.contactForm) {
       this.contactForm.patchValue(this.existingContact);
+      this.isSubmitted = false;
+      
     }
+  }
+
+  resetAndUpdate() {
+    this.contactForm.reset();
+    this.isSubmitted = false;
+    this.existingContact = undefined; // Clear the existing contact
   }
 
   submitContact(data: contact) {
@@ -48,7 +55,7 @@ export class AddContactComponent implements OnChanges {
       this.add.updateContact(this.existingContact.id, data).subscribe((res) => {
         this.isSubmitted = false;
         this.userAdded.emit('Contact updated successfully');
-        this.contactForm.reset(); // Clear the form fields after updating
+        this.resetAndUpdate(); // Call the new function to reset the form and exit the update mode
       });
     } else {
       // Add a new contact

@@ -4,23 +4,12 @@
 <div class="col-sm-7">
   <div class="both">
     <div class="Add">
-      <!-- Display the child component with existingContact bound to it -->
       <app-add-contact
         (userAdded)="onUserAdded($event)"
         [existingContact]="existingContact"
-        (cancelEdit)="cancelEdit"
-        (isUpdateMode)="false"
       ></app-add-contact>
     </div>
     <div class="table">
-      <div class="add">
-        <button
-          *ngIf="existingContact"
-          (click)="updateContact(existingContact)"
-        >
-          Add Contact
-        </button>
-      </div>
       <table class="table table mt-2">
         <thead>
           <tr>
