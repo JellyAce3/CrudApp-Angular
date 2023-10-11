@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, Output, OnChanges , SimpleChanges} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import {
   FormGroup,
   FormBuilder,
@@ -6,7 +13,6 @@ import {
   AbstractControl,
   ValidationErrors,
 } from '@angular/forms';
-import { Router } from '@angular/router';
 import { AddContactService } from 'src/app/services/addContact.service';
 import { contact } from 'src/app/shared/model/contactmodel';
 
@@ -36,7 +42,6 @@ export class AddContactComponent implements OnChanges {
     if (changes['existingContact'] && this.contactForm) {
       this.contactForm.patchValue(this.existingContact);
       this.isSubmitted = false;
-      
     }
   }
 

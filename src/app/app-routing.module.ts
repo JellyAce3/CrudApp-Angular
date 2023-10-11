@@ -5,14 +5,14 @@ import { PagenotfoundComponent } from './components/pages/pagenotfound/pagenotfo
 import { ViewComponent } from './components/pages/view/view.component';
 
 const routes: Routes = [
-  {path: '',redirectTo: 'contactlist',pathMatch:'full'},
-  {path: 'contactlist', component:ContactListComponent},
-  {path: 'viewcontact/:id', component: ViewComponent},
-  {path: '**', component:PagenotfoundComponent}
+  { path: '', redirectTo: 'contactlist', pathMatch: 'full' },
+  { path: 'contactlist', component: ContactListComponent },
+  { path: 'viewcontact/:id', component: ViewComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

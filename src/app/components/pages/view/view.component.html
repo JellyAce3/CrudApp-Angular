@@ -7,10 +7,10 @@
         <img src="assets/giphy (1).gif" />
       </div>
     </div>
-    <!--form section-->
+    <!-- form section -->
     <div class="col-md-6">
       <div class="card">
-        <h5>ViewContact</h5>
+        <h5>View Contact</h5>
         <div class="row">
           <form>
             <div class="input-box">
@@ -20,8 +20,7 @@
                   class="form-control"
                   id="floatingInput"
                   placeholder="name@example.com"
-                  [(ngModel)]="contactData.name"
-                  name="name"
+                  [value]="contactData.name"
                 />
                 <label for="floatingInput">Name</label>
               </div>
@@ -32,8 +31,7 @@
                   class="form-control"
                   id="floatingInput"
                   placeholder="name@example.com"
-                  [(ngModel)]="contactData.email"
-                  name="email"
+                  [value]="contactData.email"
                 />
                 <label for="floatingInput">Email address</label>
               </div>
@@ -43,14 +41,13 @@
                   class="form-control"
                   id="floatingInput"
                   placeholder="name@example.com"
-                  [(ngModel)]="contactData.phonenumber"
-                  name="phonenumber"
+                  [value]="contactData.phonenumber"
                 />
                 <label for="floatingInput">Mobile No.</label>
               </div>
-              <div class="text center mt-2">
+              <div class="text-center mt-2">
                 <button
-                  type="submit"
+                  type="button"
                   routerLink="/contactlist"
                   class="btn btn-success"
                 >

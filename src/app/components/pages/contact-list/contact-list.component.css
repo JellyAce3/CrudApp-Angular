@@ -1,38 +1,39 @@
-img{
-    width               : 25rem;
-    margin-top          : 5rem ;
-    margin-left         : 3rem;
+button:hover {
+  color         : white;
+  background    : linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 49%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  cursor        : pointer;
+}
+i:hover {
+  box-shadow    : 0 0 10px #fa3403, inset 0 0 10px #fdb01d;
 }
 
-nav{
-    background-image    : linear-gradient(90deg, rgba(177,180,58,1) 0%, rgba(253,29,29,1) 55%, rgba(252,176,69,1) 100%);
+.both {
+  display       : flex;
 }
 
-button:hover{
-    color               : white;
-    background          : linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 49%, rgba(252,176,69,1) 100%);
-    cursor              : pointer;
-}
-i:hover{
-    box-shadow          : 0 0 10px #fa3403, inset  0 0 10px #fdb01d;
+.table {
+  margin-top    : 4rem;
+  margin-left   : 5rem;
+  width         : max-content;
 }
 
-
-
-.both{
-    display             : flex;
+.Add {
+  margin-left   : 20rem;
+}
+button {
+  width         : 42.3rem;
+  border-radius : 0.5rem;
+  padding       : 0.2rem;
 }
 
-.table{
-    margin-top          : 4rem;
-    width               : max-content;
+.close {
+  margin-right  : 0.03rem;
 }
-
-.Add{
-    margin-left         : 20rem;
-}
-button{
-    width: 42.3rem;
-    border-radius: 0.5rem;
-    padding: 0.2rem;
+.modal-title {
+  margin-left   : 8.5rem;
 }
