@@ -24,6 +24,7 @@ img {
   box-shadow          : 0 0 10px #fdb01d, inset 0 0 10px #fdb01d;
 }
 h5 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
   margin-bottom       : revert;
   margin-left         : 5rem;
   width               : 25rem;
@@ -64,4 +65,8 @@ button:hover {
     rgba(252, 176, 69, 1) 100%
   );
   cursor              : pointer;
+}
+
+label{
+    font-family: 'Times New Roman', Times, serif;
 }

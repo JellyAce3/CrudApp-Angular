@@ -15,8 +15,8 @@ img {
   margin              : 0;
   background-color    : rgba(255, 255, 255, 0.3);
   border              : 1px solid transparent;
-  margin-left         : -3.25rem;
-  margin-top          : 2.5rem;
+  margin-left         : 5rem;
+  margin-top          : 1rem;
 }
 
 .card:hover {
@@ -24,11 +24,13 @@ img {
   box-shadow          : 0 0 10px #fdb01d, inset 0 0 10px #fdb01d;
 }
 h5 {
+  font-family         : Georgia, 'Times New Roman', Times, serif;
   margin-bottom       : revert;
   margin-left         : 5rem;
   width               : 25rem;
   font-size           : 2rem;
   transition          : 0.5s;
+  
 }
 
 .card:hover h5 {
@@ -50,6 +52,8 @@ button {
   font-size           : 1em;
   color               : black;
   font-weight         : 500;
+  background-color    : rgba(255, 255, 255, 0.3);
+  border              : 1px solid transparent;
 }
 .card:hover button {
   border              : 2px solid #fdb01d;
@@ -71,3 +75,13 @@ button:hover {
   color               : #f90404;
   font-family         : "Times New Roman", Times, serif;
 }
+
+input{
+    background-color  : rgba(255, 255, 255, 0.3);
+    border            : 1px solid transparent;
+}
+
+label{
+    font-family       : 'Times New Roman', Times, serif;
+}
+

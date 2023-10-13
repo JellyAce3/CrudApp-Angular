@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { AddContactService } from 'src/app/services/addContact.service';
 import { contact } from 'src/app/shared/model/contactmodel';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -9,6 +9,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./contact-list.component.css'],
 })
 export class ContactListComponent implements OnInit {
+  @Input() contact: contact[] = [];
+  @Output() EditContact = new EventEmitter<contact>();
+  @Output() DeleteContact = new EventEmitter<contact>();
   data: undefined | contact[];
   public contactData: contact = {} as contact;
   existingContact: contact | undefined; // Property to hold the existing contact data for updating
@@ -16,7 +19,9 @@ export class ContactListComponent implements OnInit {
 
   @ViewChild('deleteModal') deleteModal: any; // Template reference variable for the delete modal
 
-  constructor(private add: AddContactService, private modalService: NgbModal) {}
+  constructor(private add: AddContactService, private modalService: NgbModal) {
+    
+  }
 
   ngOnInit(): void {
     this.getContact();

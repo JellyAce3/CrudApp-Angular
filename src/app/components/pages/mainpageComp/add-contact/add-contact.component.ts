@@ -22,6 +22,7 @@ import { contact } from 'src/app/shared/model/contactmodel';
   styleUrls: ['./add-contact.component.css'],
 })
 export class AddContactComponent implements OnChanges {
+  
   @Output() userAdded = new EventEmitter<string>();
   @Input() existingContact: contact | undefined; // Input property for existing contact
   contactForm!: FormGroup | any;
@@ -29,7 +30,8 @@ export class AddContactComponent implements OnChanges {
 
   constructor(
     private formbuilder: FormBuilder,
-    private add: AddContactService
+    private add: AddContactService,
+   
   ) {
     this.contactForm = this.formbuilder.group({
       name: ['', Validators.required],
@@ -68,7 +70,7 @@ export class AddContactComponent implements OnChanges {
         this.contactForm.reset();
         this.isSubmitted = false;
         this.userAdded.emit('Contact added successfully');
-      });
+    });
     }
   }
 

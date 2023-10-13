@@ -22,7 +22,7 @@
                     (existingContact ? 'of existing contact' : 'field')
                   "
                 />
-                <label for="floatingInput">Name</label>
+                <label for="floatingInput"><strong>Name</strong></label>
                 <div class="error-list" *ngIf="fc.name.errors && isSubmitted">
                   <div class="err" *ngIf="fc.name.errors.required">
                     Should not be empty
@@ -42,7 +42,7 @@
                   "
                   required
                 />
-                <label for="floatingInput">Email address</label>
+                <label for="floatingInput"><strong>Email address</strong></label>
                 <div class="error-list" *ngIf="fc.email.errors && isSubmitted">
                   <div class="err" *ngIf="fc.email.errors.required">
                     Should not be empty
@@ -69,7 +69,7 @@
                     (existingContact ? 'of existing contact' : 'field')
                   "
                 />
-                <label for="floatingInput">Mobile No.</label>
+                <label for="floatingInput"><strong>Mobile No.</strong></label>
                 <div
                   class="error-list"
                   *ngIf="fc.phonenumber.errors && isSubmitted"

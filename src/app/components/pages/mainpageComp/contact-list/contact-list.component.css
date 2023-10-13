@@ -1,0 +1,104 @@
+button:hover {
+  color                 : white;
+  background            : linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 49%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  cursor                : pointer;
+}
+i:hover {
+  background            : linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 49%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border                : 5px solid #f96a04;
+  box-shadow            : 0 0 10px #fdb01d, inset 0 0 10px #fdb01d;
+}
+
+.both {
+  display               : flex;
+}
+
+table {
+  font-family           : 'Times New Roman', Times, serif;
+  margin-top            : -2rem;
+  margin-left           : -3rem;
+  width                 : max-content;
+  border-radius         : 1rem;
+  
+}
+tr.yow{
+    background-color    : rgba(255, 255, 255, 0.3);
+    border              : 1px solid transparent;
+}
+tr.woy{
+    background-color    : rgba(255, 255, 255, 0.5);
+    border              : 1px solid transparent;
+}
+
+tr:hover{
+  background            : linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 49%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border                : 5px solid #f96a04;
+  box-shadow            : 0 0 10px #fdb01d, inset 0 0 10px #fdb01d;
+}
+
+.Add {
+  margin-left           : 20rem;
+}
+button {
+  width                 : 5rem;
+  border-radius         : 0.5rem;
+  padding               : 0.2rem;
+}
+
+.close {
+  margin-right          : 0.03rem;
+}
+.modal-title {
+  margin-left           : 8.5rem;
+}
+.modal-footer:hover{
+  justify-content: center;
+}
+
+h1 {
+  font-family: Shizuru;
+  font-size: 5rem;
+  font-weight: 800;
+  margin-left: 2rem;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    135deg,
+    #0f23fe,
+    #00ffae,
+    #0df91d,
+    #f2ff00,
+    #fea60f,
+    #ff6200,
+    #f10909
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 300%;
+  animation: gradient 8s ease-in-out infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

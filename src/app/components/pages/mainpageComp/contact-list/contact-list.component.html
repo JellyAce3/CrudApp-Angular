@@ -1,0 +1,75 @@
+<app-header></app-header>
+<h1>Straw Hat Crews</h1>
+<!--table-->
+<div class="both">
+  <div class="Add">
+    <app-add-contact
+      (userAdded)="onUserAdded($event)"
+      [existingContact]="existingContact"
+    ></app-add-contact>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table">
+        <table class="transparent-table">
+          <thead>
+            <tr class="woy">
+              <th scope="col">ID#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Number</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="yow" *ngFor="let item of data">
+              <td>{{ item.id }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.email }}</td>
+              <td>{{ item.phonenumber }}</td>
+              <td>
+                <i
+                  style="color: rgb(0, 255, 4)"
+                  routerLink="/viewcontact/{{ item.id }}"
+                  class="fa fa-eye"
+                  >View</i
+                >&nbsp;
+                <i
+                  (click)="editContact(item)"
+                  style="color: blue"
+                  class="fas fa-edit"
+                  >Edit</i
+                >
+                &nbsp;
+                <i
+                  style="color: red"
+                  (click)="openDeleteModal(item)"
+                  class="fas fa-trash"
+                  >Delete</i
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Delete Confirmation Modal -->
+      <ng-template #deleteModal let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title">Confirm Deletion</h4>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete this contact?</p>
+        </div>
+        <div class="modal-footer">
+          <i type="i" class="btn btn-danger" (click)="deleteContact()">
+            Delete
+          </i>
+          <i type="i" class="btn btn-secondary" (click)="d('cancel')">
+            Cancel
+          </i>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
