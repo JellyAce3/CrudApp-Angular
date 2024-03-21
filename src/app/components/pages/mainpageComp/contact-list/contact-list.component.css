@@ -30,15 +30,9 @@ table {
   width                 : max-content;
   border-radius         : 1rem;
   
+  
 }
-tr.yow{
-    background-color    : rgba(255, 255, 255, 0.3);
-    border              : 1px solid transparent;
-}
-tr.woy{
-    background-color    : rgba(255, 255, 255, 0.5);
-    border              : 1px solid transparent;
-}
+
 
 tr:hover{
   background            : linear-gradient(
